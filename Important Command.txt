@@ -1,0 +1,19 @@
+=============================================================================== 
+             How to create your first Django Project 
+===============================================================================
+
+1- Install Python 3
+----\Projects> python --version
+----\Projects> python --version   
+
+2- installing Virtualenv
+----\Projects>virtualenv env
+----\Projects>env>activate
+
+3-  Install django
+------\Projects>env>pip install django
+4-  create project 
+------\Projects>env>django-admin startproject mywebsite
+5-   run test server
+------\Projects>env>python manage.py runserver 
+http://127.0.0.1:8000/
