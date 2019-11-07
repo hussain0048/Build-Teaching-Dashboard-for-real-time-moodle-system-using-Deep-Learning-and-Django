@@ -1,0 +1,37 @@
+=================================================================================
+         Important Website to learn Django
+==================================================================================
+1---Python Django Tutorial | Django Course | Intellipaat
+        https://www.youtube.com/watch?v=pAtG2m_mf4g&fbclid=IwAR0oifiuUcKbAhPTv2kHbDxq0GlCX_QSD6bA8E64KMS_SmjvFy3udMubi3I
+
+=================================================================================
+         Deploy Machine Learning Models with Django
+==================================================================================
+1----Deploy Machine Learning Models with Django
+       https://www.deploymachinelearning.com/
+       https://www.reddit.com/r/MachineLearning/comments/dsvk20/p_deploy_machine_learning_models_with_django/
+       https://github.com/pplonski/my_ml_service
+
+=============================================================================== 
+             How to create your first Django Project 
+===============================================================================
+
+1- Install Python 3
+----\Projects> python --version
+----\Projects> python --version   
+
+2- installing Virtualenv
+----\Projects>virtualenv env
+----\Projects>env>activate
+
+3-  Install django
+------\Projects>env>pip install django
+4-  create project 
+------\Projects>env>django-admin startproject mywebsite
+5-   run test server
+------\Projects>env>python manage.py runserver 
+http://127.0.0.1:8000/
+6- Create new App
+-------\Projects>env>mywebsite>python manage.py startapp tutorial
+7-  Copy urls.py files from mywebsite to tutorial 
+
