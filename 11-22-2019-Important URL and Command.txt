@@ -1,0 +1,86 @@
+=================================================================================
+         Important Website to learn Django
+==================================================================================
+1---Python Django Tutorial | Django Course | Intellipaat
+        https://www.youtube.com/watch?v=pAtG2m_mf4g&fbclid=IwAR0oifiuUcKbAhPTv2kHbDxq0GlCX_QSD6bA8E64KMS_SmjvFy3udMubi3I
+
+=================================================================================
+         Deploy Machine Learning Models with Django
+==================================================================================
+1----Deploy Machine Learning Models with Django
+       https://www.deploymachinelearning.com/
+       https://www.reddit.com/r/MachineLearning/comments/dsvk20/p_deploy_machine_learning_models_with_django/
+       https://github.com/pplonski/my_ml_service
+
+=============================================================================== 
+             Installing Django and make envirment for Django
+===============================================================================
+
+1) Install Python 3
+----\Projects> python --version
+----\Projects> python --version   
+
+2- installing Virtualenv
+----\Projects>virtualenv env
+----\Projects>env>activate
+
+3-  Install django
+------\Projects>env>pip install django
+==================================================================================
+                             Create First Django Projects 
+==================================================================================
+
+1)   ----\Projects>env>django-admin startproject mywebsite
+
+Details: create a folder with name mywebsite and having the following files
+Init_.py: This file make sure that our folder(mywebsite) is created as package not just like other folder
+setting.py: it inclue different setting such as secruity,installing app setting etc
+URL.py:-every application and application have different URL so when you open website there differetn URL of same website
+Wsgi(webser gatway interface).py:- It is used to established the connection between webpplication and webserver 
+manage.py:- this is actully used to run the server and print user to webapplication
+view:- URL.py called view file.it contains member function and classess which take the webrequest and return the web response 
+===================================================================================
+                                Create new App
+===================================================================================
+
+1) -   run test server
+------\Projects>env>mywebsite>python manage.py runserver 
+http://127.0.0.1:8000/ # This is used to lunch the projects 
+
+---add new web application to my projects
+2) \Projects>env>mywebsite>python manage.py startapp tutorial
+3)-  Copy urls.py files from mywebsite to tutorial because tutorial folder missing this files 
+4) open url.py files from tutorial folder and add the following commands
+ 
+from django.contrib import admin
+from django.urls import path
+from .import views
+# list of URL which is inclue in our apps
+
+urlpattern = {
+    path ('',views.home, name="home") # something in quota mean we return somthing in homepage (view)
+                                      # home is function which return some text 
+4) open views.py file and make the followin changes 
+# webbrowser request to this view and this view return somethings using http protocol
+from django.http import HttpResponse
+def home(request)
+    return HttpResponse ('This is my first Page')
+
+5) Make changes in url.py in website folder 
+
+from django.urls imprt path,include
+urlpattern = {
+    path ('',include ('tutorial.urls')),
+    path ('admin/',admin.site.urls),
+
+6) again open comnd prompt 
+------\Projects>env>mywebsite>python manage.py runserver
+7) check the following URL in browser
+http://127.0.0.1:8000/
+===================================================================================
+                                Create new App
+===================================================================================
+Notes: We create project moodle and then we create app dashboard
+1) open the Moodle filter and change the setting of setting.py
+
+
