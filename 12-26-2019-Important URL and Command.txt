@@ -1,0 +1,136 @@
+=================================================================================
+         Important Website to learn Django full course
+==================================================================================
+1---Python Django Tutorial | Django Course | Intellipaat
+        https://www.youtube.com/watch?v=pAtG2m_mf4g&fbclid=IwAR0oifiuUcKbAhPTv2kHbDxq0GlCX_QSD6bA8E64KMS_SmjvFy3udMubi3I
+2-How to Use Bootstrap with Django (Django Tutorial)
+        https://www.youtube.com/watch?v=eAZS41vMSjI
+3-Django Web Development with Python 5
+        https://www.youtube.com/watch?v=nWRboXrcipU
+4-Django Tutorial for Beginners
+        https://www.youtube.com/watch?v=OTmQOjsl0eg
+5-Django Web Development with Python
+        https://www.youtube.com/playlist?list=PLQVvvaa0QuDe9nqlirjacLkBYdgc2inh3
+
+=================================================================================
+         Deploy Machine Learning Models with Django
+==================================================================================
+1----Deploy Machine Learning Models with Django
+       https://www.deploymachinelearning.com/
+       https://www.reddit.com/r/MachineLearning/comments/dsvk20/p_deploy_machine_learning_models_with_django/
+       https://github.com/pplonski/my_ml_service
+
+=============================================================================== 
+             Installing Django and make envirment for Django
+===============================================================================
+
+1) Install Python 3
+----\Projects> python --version
+----\Projects> python --version  
+----\Projects> python --version   
+
+2- installing Virtualenv
+----\Projects>virtualenv env
+----\Projects>env>activate
+
+3-  Install django
+------\Projects>env>import django
+------\Projects>env>print (django.___version_) # it show you version of django
+------\Projects>env>pip install django
+------\Projects>env>pip install django=2.1.5
+------\Projects>env>django-admin             // you see all command
+==================================================================================
+                             Create First Django Projects 
+==================================================================================
+
+1)   ----\Projects>env>django-admin startproject mywebsite
+2)   ----\Projects>env>python manage.py migrate # migrate executes those SQL commands in the database file. So after executing migrate all the tables of your installed apps are created in your database
+
+Details: create a folder with name mywebsite and having the following files
+Init_.py: 
+      This file make sure that our folder(mywebsite) is created as package not just like other folder
+setting.py: 
+      it inclue different setting such as secruity,installing app setting etc
+URL.py:-
+       every application and application have different URL so when you open website there differetn URL of same website
+Wsgi(webser gatway interface).py:-
+      It is used to established the connection between webpplication and webserver 
+manage.py:- 
+ this used to mange of site.this is actully used to run the server and print user to webapplication
+view:- 
+      URL.py called view file.it contains member function and classess which take the webrequest and return the web response 
+
+3) -   run test server
+------\Projects>env>mywebsite>python manage.py runserver 
+http://127.0.0.1:8000/ # This is used to lunch the projects 
+
+=================================================================================
+ Introduction To Django 3.0 Admin Panel
+==================================================================================
+The Django admin provide web base interface to access the database connect 
+to django project
+1) create super user 
+------\Projects>env>mywebsite>python manage.py createsuperuser
+ username:ali # if you leave blank then it will take user name of computer
+email address:mushtqmsit@gmail.com
+pass:*************
+2) put this site in browser http://127.0.0.1:8000/ali
+===================================================================================
+                                 Create new App
+===================================================================================
+---add new web application to my projects
+2) \Projects>env>mywebsite>python manage.py startapp tutorial
+
+ ===================================================================================
+                                URL Configuration In Django
+===================================================================================
+1)-  Copy urls.py files from mywebsite (Main Projects) to tutorial (new APPS) because tutorial folder missing this files 
+2) open url.py files from tutorial folder (Apps) and add the following commands
+Notes: Every app has URL
+
+from django.contrib import admin
+from django.urls import path
+from .import views
+# list of URL which is inclue in our apps
+
+urlpattern = {
+    path ('',views.home, name="home") # if quota is empty it mean we return somthing in homepage (view)
+    or
+    path ('news/',views.home, name="home") # http://127.0.0.1:8000/news
+
+3) open views.py file and make the following changes 
+# webbrowser request to this view and this view return somethings using http protocol
+from django.http import HttpResponse
+def home(request)
+    return HttpResponse ('This is my first Page')
+
+4) Make changes in url.py in website (Main Projects) folder 
+
+from django.urls imprt path,include
+urlpattern = {
+    path ('',include ('tutorial.urls')),
+    path ('admin/',admin.site.urls),
+
+6) again open comnd prompt 
+------\Projects>env>mywebsite>python manage.py runserver
+7) check the following URL in browser
+http://127.0.0.1:8000/
+or
+http://127.0.0.1:8000/News
+
+Notes: We create project moodle and then we create app dashboard
+1) open the Moodle filter and change the setting of setting.py
+and please name of the app here
+
+===================================================================================
+                                Connect Django With Mysql Database
+===================================================================================
+
+1)--->Pip install mysqlclient 
+2)---> go main project setting.py
+   Database= {
+                 'default': {
+                        'ENGINE':'django.db.backends.mysql',
+3) create database in mysql called mydjango
+
+
